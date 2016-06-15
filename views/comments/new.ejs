@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<h1 style='text-align: center'>enter a new comment to <%=passin.name%> </h1>
+
+<div class='container'>
+    <div class='row'>
+        
+        <div style='width: 30%; margin: 30px auto;'>
+<form action='/camps/<%=passin._id%>/comments' method='POST'>
+    
+   <div class='form-group'> <input  class='form-control' type='text' name= 'comment[txt]' placeholder = 'type comment here...'></input> </div>
+      <!--<div class='form-group'> <input  class='form-control' type='text' name= 'comment[said]' value = '<% curuser.username %>'></input> </div>-->
+
+   <div class='form-group'> <button class='btn btn-large btn-primary btn-block'>Submit!</button> </div>
+</form>
+<a href="/camps"> go back! </a>
+</div>
+
+    </div>
+
+</div>
+
+
+
+<%include ../partials/footer %>
